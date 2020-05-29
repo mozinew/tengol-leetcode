@@ -4,7 +4,28 @@ package com.tengol.leetcode;
 import java.util.Stack;
 
 /**
- * No394DecodeString
+ * No394DecodeString，中等
+ *
+ * 给定一个经过编码的字符串，返回它解码后的字符串。
+ * 编码规则为: k[encoded_string]，表示其中方括号内部的 encoded_string 正好重复 k 次。注意 k 保证为正整数。
+ * 你可以认为输入字符串总是有效的；输入字符串中没有额外的空格，且输入的方括号总是符合格式要求的。
+ * 此外，你可以认为原始数据不包含数字，所有的数字只表示重复的次数 k ，例如不会出现像 3a 或 2[4] 的输入。
+ *
+ * 示例:
+ * s = "3[a]2[bc]", 返回 "aaabcbc".
+ * s = "3[a2[c]]", 返回 "accaccacc".
+ * s = "2[abc]3[cd]ef", 返回 "abcabccdcdcdef".
+ *
+ * 来源：力扣（LeetCode）
+ * 链接：https://leetcode-cn.com/problems/decode-string
+ * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ *
+ * 【个人总结】
+ * 1. 思路很简单，使用数据结构【栈】解决，难点在于处理过程
+ * 2. 官方题解的巧妙之处：
+ *     （1）使用 ptr 指针
+ *     （2）入栈时获取连续的数字或字母，将其作为一个整体入栈，简化了出栈合并的问题
+ * 3. 该文档的解法可以继续优化，后续复习时可以尝试优化方案，更多解题思路参见官方题解
  *
  * @author dongrui
  * @date 2020/5/28 15:05
